@@ -1,0 +1,13 @@
+// open62541 is provided by Homebrew. Install with:
+//   brew install open62541
+//
+// Default is Apple Silicon Homebrew for local development. Intel Homebrew users
+// can override this from xcodebuild by passing OPEN62541_PREFIX=/usr/local/opt/open62541
+// as a build setting. For release builds, use Tools/build_openssl_release.sh and
+// Tools/build_open62541_release.sh, then pass the generated OPEN62541_PREFIX.
+OPEN62541_PREFIX = /opt/homebrew/opt/open62541
+HEADER_SEARCH_PATHS = $(inherited) $(OPEN62541_PREFIX)/include
+LIBRARY_SEARCH_PATHS = $(inherited) $(OPEN62541_PREFIX)/lib
+OTHER_LDFLAGS = $(inherited) -lopen62541 -Wl,-rpath,$(OPEN62541_PREFIX)/lib
+CLANG_ENABLE_MODULES = YES
+SWIFT_INCLUDE_PATHS = $(inherited) $(OPEN62541_PREFIX)/include

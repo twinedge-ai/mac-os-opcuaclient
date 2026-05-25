@@ -1,0 +1,21 @@
+OPC UA Client
+
+This project uses open62541, an open-source OPC UA implementation licensed
+under the Mozilla Public License 2.0. The app links to open62541 as an external
+library and this repository does not vendor or modify open62541 source code.
+
+open62541:
+  Homepage: https://open62541.org/
+  Source: https://github.com/open62541/open62541
+  License: MPL-2.0
+
+The open62541 library is not vendored in this repository. Contributors install
+it locally through Homebrew for development builds.
+
+This project also depends on Swift Package Manager packages resolved in
+OpcUaClient.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved.
+See THIRD_PARTY_NOTICES.md for dependency notices.
+
+OPC UA and OPC Foundation marks belong to the OPC Foundation. This project is
+not affiliated with, endorsed by, or certified by the OPC Foundation. See
+TRADEMARKS.md.
